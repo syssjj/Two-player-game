@@ -1,0 +1,256 @@
+<!--/****⽣成⽇期: 2023-08-25 15:00:57****/-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>孙阳的页面</title>
+  </head>
+
+  <body>
+    <input type="text" class="username" placeholder="手机号" />
+    <input type="text" class="password" placeholder="密码" />
+    <button class="deng">登录</button>
+  </body>
+</html>
+<script src="https://cdn.bootcdn.net/ajax/libs/qs/6.11.1/qs.js"></script>
+<script>
+  // // class School {
+  // //   constructor() {
+  // //     this.Schoolname = "八维";
+  // //     this.city = "天津";
+  // //   }
+  // // }
+  // // School.prototype.educate = function () {
+  // //   console.log("编程教学");
+  // // };
+  // // School.flag = false;
+
+  // // function Student(name, age) {
+  // //   this.name = name;
+  // //   this.age = age;
+  // //   School.call(this);
+  // // }
+  // // Student.prototype = new School();
+  // // Student.prototype.constructor = Student;
+  // // let jack = new Student("jack", 23);
+  // // console.log(jack);
+  // // console.dir(Student);
+  // // console.log(Student.flag);
+
+  // class School {
+  //   constructor() {
+  //     this.Schoolname = "八维";
+  //     this.city = "天津";
+  //   }
+  //   educate() {
+  //     console.log("教授编程技能");
+  //   }
+  //   static flag = false;
+  // }
+
+  // class Student extends School {
+  //   constructor(name, age) {
+  //     super();
+  //     this.name = name;
+  //     this.age = age;
+  //   }
+  //   say() {
+  //     console.log("hello");
+  //   }
+  // }
+  // let jack = new Student("jack", 23);
+  // let p1 = new Promise((resolve, reject) => {
+  //   setTimeout(() => {
+  //     true
+  //       ? resolve({
+  //           status: 200,
+  //           data: [1, 2, 3],
+  //         })
+  //       : reject({ status: 404, data: [] });
+  //   });
+  // });
+  // console.log(p1, "p1");
+
+  // let p2 = new Promise((resolve, reject) => {
+  //   setTimeout(() => {});
+  // });
+
+  // function p4() {
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(function () {
+  //       reject("fall");
+  //     });
+  //   });
+  // }
+  // p4()
+  //   .then((res) => {
+  //     console.log(res);
+  //   })
+  //   .catch((err) => {
+  //     console.log(err);
+  //   });
+
+  // function p1() {
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(function () {
+  //       reject(1);
+  //     }, 100);
+  //   });
+  // }
+  // function p2() {
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(function () {
+  //       resolve(2);
+  //     }, 200);
+  //   });
+  // }
+  // function p3() {
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(function () {
+  //       resolve(3);
+  //     }, 300);
+  //   });
+  // }
+  // Promise.all([p1(), p2(), p3()])
+  //   .then((res) => {
+  //     console.log(res);
+  //   })
+  //   .catch((err) => {
+  //     console.log(err);
+  //   });
+
+  // function p1() {
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(function () {
+  //       resolve("成功");
+  //     }, 3000);
+  //   });
+  // }
+
+  // async function fn() {
+  //   try {
+  //     let data = await p1();
+  //     console.log(data);
+  //     console.log(1);
+  //   } catch (error) {
+  //     console.log(error);
+  //     console.log(2);
+  //   }
+  //   console.log("hello");
+  // }
+  // fn();
+
+  // class Ajax {
+  //   getJSON({ url, type, data }) {
+  //     data = Qs.stringify(data);
+  //     const promise = new Promise(function (resolve, reject) {
+  //       const handler = function () {
+  //         if (this.readyState !== 4) {
+  //           return;
+  //         }
+  //         if (this.status === 200) {
+  //           resolve(this.response);
+  //         } else {
+  //           reject(new Error(this.statusText));
+  //         }
+  //       };
+  //       const client = new XMLHttpRequest();
+
+  //       client.onreadystatechange = handler;
+  //       client.responseType = "json";
+
+  //       if (type == "get") {
+  //         client.open("GET", url);
+  //         client.setRequestHeader("Accept", "application/json");
+  //         client.send();
+  //       }
+  //       if (type == "post") {
+  //         client.open("POST", url);
+  //         client.setRequestHeader(
+  //           "Content-Type",
+  //           "application/x-www-form-urlencoded"
+  //         );
+  //         client.send(data);
+  //       }
+  //     });
+
+  //     return promise;
+  //   }
+  // }
+  // let user = new Ajax();
+  // let username = document.querySelector(".username");
+  // let password = document.querySelector(".password");
+  // let deng = document.querySelector(".deng");
+
+  // async function fn() {
+  //   try {
+  //     let data = await user.getJSON({
+  //       url: "http://vueshop.glbuys.com/api/home/user/pwdlogin?token=1ec949a15fb709370f",
+  //       type: "post",
+  //       data: {
+  //         cellphone: username.value,
+  //         password: password.value,
+  //       },
+  //     });
+  //     console.log(data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
+  // let inpList = Array.from(document.querySelectorAll("input"));
+  // console.log(inpList);
+  // deng.addEventListener("click", function () {
+  //   let inpNull = inpList.find((item) => {
+  //     return item.value == "";
+  //   });
+  //   if (inpNull) {
+  //     alert(`请输入${inpNull.placeholder}`);
+  //   } else {
+  //     fn();
+  //   }
+  // });
+
+  // function Sort(arr) {
+  //   let len = arr.length - 1;
+  //   for (let i = 0; i < len; i++) {
+  //     for (let j = 0; j < len - i; j++) {
+  //       if (arr[j] > arr[j + 1]) {
+  //         let temp = arr[j];
+  //         arr[j] = arr[j + 1];
+  //         arr[j + 1] = temp;
+  //       }
+  //     }
+  //   }
+  //   return arr;
+  // }
+  // console.log(Sort([1, 8, 9, 5, 7, 6, 2, 4, 3, 8]));
+  // function quickSort(array) {
+  //   // 递归结束条件
+  //   if (!array.length) {
+  //     return array;
+  //   }
+  //   // 浅拷贝
+  //   let temp = [...array];
+  //   // 选择基准值
+  //   let pivoe = temp.pop();
+  //   // 创建分区
+  //   let left = [];
+  //   let right = [];
+  //   // 循环遍历进行分区
+  //   for (let i = 0; i < temp.length; i++) {
+  //     if (temp[i] <= pivoe) {
+  //       left.push(temp[i]);
+  //     } else {
+  //       right.push(temp[i]);
+  //     }
+  //   }
+  //   return quickSort(left).concat(pivoe, quickSort(right));
+  // }
+
+  // let arr = [1, 8, 9, 5, 7, 6, 2, 4, 3, 8];
+  // console.log(quickSort(arr));
+</script>
